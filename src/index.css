@@ -1,0 +1,122 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f8eee3;
+  background: #17100d;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background: #c58b55;
+  color: #17100d;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.container-custom {
+  width: min(1180px, 90%);
+  margin-inline: auto;
+}
+
+.coffee-gradient {
+  background: linear-gradient(135deg, #c58b55, #e5bd8d);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(23,16,13,.96) 0%,
+    rgba(23,16,13,.83) 48%,
+    rgba(23,16,13,.12) 100%
+  );
+}
+
+.product-card {
+  transition: transform .35s ease, border-color .35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-9px);
+  border-color: #bd8756;
+}
+
+.product-card img {
+  transition: transform .6s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.coffee-bean {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-17px) rotate(12deg); }
+}
+
+.reveal-up {
+  animation: reveal .8s ease both;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #17100d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8e6040;
+  border-radius: 20px;
+}
+
+html {
+  scrollbar-color: #8e6040 #17100d;
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(23,16,13,.94),
+      rgba(23,16,13,.72)
+    );
+  }
+}
